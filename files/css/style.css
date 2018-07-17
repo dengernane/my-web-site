@@ -1,0 +1,63 @@
+.menu {
+    background-color: white;
+    margin-top: 100px;
+    width: 100%;
+}
+.ul {
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+}
+.li {
+    padding: 10px;
+    margin-right: 15px;
+}
+.li a{
+    position: relative;
+}
+.li a, i{
+    margin-right: 10px;
+}
+.li a::before{
+    content: '';
+    width: 0px;
+    height: 2px;
+    background-color: blue;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: .5s;
+    mix-blend-mode: multiply;
+}
+.li a::after{
+    content: '';
+    width: 0px;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    transition: .5s;
+    mix-blend-mode: multiply;
+}
+li.li:hover{
+    background-color: e5ae8;
+}
+li.li:hover a::before{
+    width: 50%;
+    transform: rotateX(100%);
+}
+li.li:hover a::after{
+    width: 50%;
+    transform: rotateX(-100%);
+}
+
+
+
+
+
+
+
+
+
+
